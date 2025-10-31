@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:uts_pemmob/screens/home_screen.dart';
+import 'package:uts_pemmob/config/routes.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,12 +11,13 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
+
       title: 'Mobile Quiz',
       theme: ThemeData(
         fontFamily: "RhodiumLibre"
       ),
-      home: const HomeScreen(),
+      routerConfig: createRouter(),
       debugShowCheckedModeBanner: false,
     );
   }

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:uts_pemmob/widgets/app_scaffold.dart';
+import 'package:go_router/go_router.dart';
+import '../config/routes.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen ({super.key});
@@ -73,28 +75,65 @@ class HomeScreen extends StatelessWidget {
                     ),
                     SizedBox(height: screenHeight * 0.03),
                     //TODO : Button navigasi
+
                     Container(
+                      width: screenWidth * 0.8,
+                      height: screenHeight * 0.1,
                       decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(screenWidth * 0.05),
-                          color: Colors.white,
+                        borderRadius: BorderRadius.circular(screenWidth * 0.05),
                         boxShadow: [
                           BoxShadow(
                             color : Colors.black.withValues(alpha: 0.2),
                             offset: Offset(0, screenHeight * 0.005),
                           )
-                        ]
+                        ],
                       ),
-                      child: TextField(
-                        textAlign: TextAlign.center,
-                          decoration: InputDecoration(
-                            hintText: "MULAI",
-                            hintStyle: TextStyle(
-                              color: Colors.black,
-                              fontSize: screenWidth * 0.15,
-                            ),
-                          )
-                      ),
-                    )
+                      child: ElevatedButton(
+                        onPressed: () {
+                          context.go(AppRoutes.ready);
+                        },
+                        style: ElevatedButton.styleFrom(
+                          backgroundColor: Color(0xFFD1D1D1),
+                          shape:
+                            RoundedRectangleBorder(borderRadius: BorderRadius.circular(screenWidth * 0.05)),
+                          elevation: 3,
+                          padding: EdgeInsets.all(screenWidth * 0.03)
+                        ),
+                        child: Text(
+                          textAlign: TextAlign.center,
+                          'MULAI',
+                          style: TextStyle(
+                            fontSize: screenWidth * 0.12,
+                            color: Colors.black,
+                          ),
+                        )
+
+                                        ),
+                    ),
+
+
+                    // Container(
+                    //   decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(screenWidth * 0.05),
+                    //       color: Colors.white,
+                    //     boxShadow: [
+                    //       BoxShadow(
+                    //         color : Colors.black.withValues(alpha: 0.2),
+                    //         offset: Offset(0, screenHeight * 0.005),
+                    //       )
+                    //     ]
+                    //   ),
+                    //   child: TextField(
+                    //     textAlign: TextAlign.center,
+                    //       decoration: InputDecoration(
+                    //         hintText: "MULAI",
+                    //         hintStyle: TextStyle(
+                    //           color: Colors.black,
+                    //           fontSize: screenWidth * 0.15,
+                    //         ),
+                    //       )
+                    //   ),
+                    // )
                   ],
 
               ),
