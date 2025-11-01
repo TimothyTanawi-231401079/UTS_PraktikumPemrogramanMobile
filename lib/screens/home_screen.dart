@@ -74,7 +74,6 @@ class HomeScreen extends StatelessWidget {
                       ),
                     ),
                     SizedBox(height: screenHeight * 0.03),
-                    //TODO : Button navigasi
 
                     Container(
                       width: screenWidth * 0.8,
@@ -111,29 +110,6 @@ class HomeScreen extends StatelessWidget {
                                         ),
                     ),
 
-
-                    // Container(
-                    //   decoration: BoxDecoration(
-                    //       borderRadius: BorderRadius.circular(screenWidth * 0.05),
-                    //       color: Colors.white,
-                    //     boxShadow: [
-                    //       BoxShadow(
-                    //         color : Colors.black.withValues(alpha: 0.2),
-                    //         offset: Offset(0, screenHeight * 0.005),
-                    //       )
-                    //     ]
-                    //   ),
-                    //   child: TextField(
-                    //     textAlign: TextAlign.center,
-                    //       decoration: InputDecoration(
-                    //         hintText: "MULAI",
-                    //         hintStyle: TextStyle(
-                    //           color: Colors.black,
-                    //           fontSize: screenWidth * 0.15,
-                    //         ),
-                    //       )
-                    //   ),
-                    // )
                   ],
 
               ),

@@ -10,6 +10,7 @@ class ReadyCountScreen extends StatefulWidget {
 
 class _VariableChange extends State<ReadyCountScreen> {
   String _message = "BERSIAP";
+  String id = "1";
 
   @override
   void initState() {
@@ -25,7 +26,7 @@ class _VariableChange extends State<ReadyCountScreen> {
       });
     });
     Future.delayed(Duration(seconds: 4), () {
-      context.go(AppRoutes.quiz);
+      context.push('${AppRoutes.quiz}/$id');
     });
 
   }

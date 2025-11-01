@@ -31,9 +31,13 @@ GoRouter createRouter() {
         builder: (context, state) => ReadyCountScreen(),
       ),
       GoRoute(
-        path: AppRoutes.quiz,
-        name: 'quiz',
-        builder: (context, state) => const QuizScreen(),
+          path: '${AppRoutes.quiz}/:id',
+          name: 'quiz',
+          parentNavigatorKey: rootNavigatorKey,
+          builder: (context, state) {
+            final id = state.pathParameters['id'] ?? '';
+            return QuizScreen(id: id);
+          }
       ),
       GoRoute(
           path: '${AppRoutes.finish}/:nama',
