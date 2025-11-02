@@ -22,8 +22,12 @@ class QuizScreen extends StatelessWidget {
         orElse: () => null
     );
 
-    bool isSelected = false;
-    //bool button = id == '1';
+    final String id1 = '1';
+    final String id2 = '2';
+    final String id3 = '3';
+    final String id4 = '4';
+    final String id5 = '5';
+    String idnext = (int.parse(id)+ 1).toString();
     return AppScaffold(
         body: Padding(
           padding: EdgeInsets.symmetric(
@@ -59,134 +63,155 @@ class QuizScreen extends StatelessWidget {
                   color: Colors.black
                 ),
               ),
-              //TODO : Change to Widgets
+              //Pilihan Ganda
               SizedBox(height: screenHeight * 0.04),
               //Pilihan 1
-              Container(
-                width: screenWidth * 0.8,
-                height: screenHeight * 0.06,
-                padding: EdgeInsets.all(screenWidth * 0.01),
-                decoration: BoxDecoration(
-                  color: Color(0xFFD9D9D9)
-                ),
-                child: Row(
-                  children: [
-                    IconButton(
-                      onPressed: () {
-                        //TODO : need Provider, change icon
-                      },
-                        icon: Icon(
+              GestureDetector(
+                onTap: () => {},//TODO : need Provider, change icon,
+                child: Container(
+                  width: screenWidth * 0.8,
+                  height: screenHeight * 0.06,
+                  padding: EdgeInsets.symmetric(
+                      horizontal: screenWidth * 0.05,
+                      vertical: screenHeight * 0.01
+                  ),
+                  decoration: BoxDecoration(
+                      color: Color(0xFFD9D9D9)
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
                           Icons.check_box_outline_blank,
-                          color: Colors.white,),
-
-                    ),
-                    SizedBox(
-                      width: screenWidth * 0.5,
-                      child: Text(
-                        soal.pilihan1,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                          fontSize: screenWidth * 0.05
-                        ),
+                          color: Colors.white,
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: screenWidth * 0.55,
+                        child: Text(
+                          soal.pilihan1,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: screenWidth * 0.05
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
+
               SizedBox(height: screenHeight * 0.025),
               //Pilihan 2
-              Container(
-                width: screenWidth * 0.8,
-                height: screenHeight * 0.06,
-                padding: EdgeInsets.all(screenWidth * 0.01),
-                decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9)
-                ),
-                child: Row(
-                  children: [
-                    IconButton(
-                        onPressed: () { isSelected = true;},
-                        icon: Icon(Icons.check_box_outline_blank, color: Colors.white,)
-                    ),
-                    SizedBox(
-                      width: screenWidth * 0.5,
-                      child: Text(
-                        soal.pilihan2,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: screenWidth * 0.05
-                        ),
+              GestureDetector(
+                onTap: () => {},//TODO : need Provider, change icon,
+                child: Container(
+                  width: screenWidth * 0.8,
+                  height: screenHeight * 0.06,
+                  padding: EdgeInsets.symmetric(
+                      horizontal: screenWidth * 0.05,
+                      vertical: screenHeight * 0.01
+                  ),
+                  decoration: BoxDecoration(
+                      color: Color(0xFFD9D9D9)
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.check_box_outline_blank,
+                        color: Colors.white,
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: screenWidth * 0.55,
+                        child: Text(
+                          soal.pilihan2,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: screenWidth * 0.05
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: screenHeight * 0.025),
               //Pilihan 3
-              Container(
-                width: screenWidth * 0.8,
-                height: screenHeight * 0.06,
-                padding: EdgeInsets.all(screenWidth * 0.01),
-                decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9)
-                ),
-                child: Row(
-                  children: [
-                    IconButton(
-                        onPressed: () { isSelected = true;},
-                        icon: Icon(Icons.check_box_outline_blank, color: Colors.white,)
-                    ),
-                    SizedBox(
-                      width: screenWidth * 0.5,
-                      child: Text(
-                        soal.pilihan3,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: screenWidth * 0.05
-                        ),
+              GestureDetector(
+                onTap: () => {},//TODO : need Provider, change icon,
+                child: Container(
+                  width: screenWidth * 0.8,
+                  height: screenHeight * 0.06,
+                  padding: EdgeInsets.symmetric(
+                      horizontal: screenWidth * 0.05,
+                      vertical: screenHeight * 0.01
+                  ),
+                  decoration: BoxDecoration(
+                      color: Color(0xFFD9D9D9)
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.check_box_outline_blank,
+                        color: Colors.white,
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: screenWidth * 0.55,
+                        child: Text(
+                          soal.pilihan3,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: screenWidth * 0.05
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: screenHeight * 0.025),
               //Pilihan 4
-              Container(
-                width: screenWidth * 0.8,
-                height: screenHeight * 0.06,
-                padding: EdgeInsets.all(screenWidth * 0.01),
-                decoration: BoxDecoration(
-                    color: Color(0xFFD9D9D9)
-                ),
-                child: Row(
-                  children: [
-                    IconButton(
-                        onPressed: () { isSelected = true;},
-                        icon: Icon(Icons.check_box_outline_blank, color: Colors.white,)
-                    ),
-                    SizedBox(
-                      width: screenWidth * 0.5,
-                      child: Text(
-                        soal.pilihan4,
-                        textAlign: TextAlign.center,
-                        style: TextStyle(
-                            fontSize: screenWidth * 0.05
-                        ),
+              GestureDetector(
+                onTap: () => {},//TODO : need Provider, change icon,
+                child: Container(
+                  width: screenWidth * 0.8,
+                  height: screenHeight * 0.06,
+                  padding: EdgeInsets.symmetric(
+                      horizontal: screenWidth * 0.05,
+                      vertical: screenHeight * 0.01
+                  ),
+                  decoration: BoxDecoration(
+                      color: Color(0xFFD9D9D9)
+                  ),
+                  child: Row(
+                    children: [
+                      Icon(
+                        Icons.check_box_outline_blank,
+                        color: Colors.white,
                       ),
-                    )
-                  ],
+                      SizedBox(
+                        width: screenWidth * 0.55,
+                        child: Text(
+                          soal.pilihan4,
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontSize: screenWidth * 0.05
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
                 ),
               ),
               SizedBox(height: screenHeight * 0.035),
-              //TODO : Change to Widgets
+              //Tombol Soal
               Row(
+
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   SizedBox(
                     width: screenWidth * 0.095,
                     height: screenWidth * 0.095,
                     child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {context.push('${AppRoutes.quiz}/$id1');},
                        style: ElevatedButton.styleFrom(
                            backgroundColor: Color(0xFF0ED500),
                            shape:
@@ -194,7 +219,7 @@ class QuizScreen extends StatelessWidget {
                            elevation: 3,
                            padding: EdgeInsets.all(screenWidth * 0.01)
                        ),
-                        child: Text(
+                       child: Text(
                         '1',
                         textAlign: TextAlign.center,
 
@@ -203,21 +228,15 @@ class QuizScreen extends StatelessWidget {
                           color: Colors.black
                           ),
                         ),
-                    // child: Text(
-                    //   '1',
-                    //   textAlign: TextAlign.center,
-                    //   style: TextStyle(
-                    //     fontSize: screenWidth * 0.05,
-                    //   ),
 
                     ),
                   ),
-                  SizedBox(width: screenWidth * 0.05),
+                  SizedBox(width: screenWidth * 0.075),
                   SizedBox(
                     width: screenWidth * 0.095,
                     height: screenWidth * 0.095,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {context.push('${AppRoutes.quiz}/$id2');},
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF0ED500),
                           shape:
@@ -234,21 +253,15 @@ class QuizScreen extends StatelessWidget {
                             color: Colors.black
                         ),
                       ),
-                      // child: Text(
-                      //   '1',
-                      //   textAlign: TextAlign.center,
-                      //   style: TextStyle(
-                      //     fontSize: screenWidth * 0.05,
-                      //   ),
 
                     ),
                   ),
-                  SizedBox(width: screenWidth * 0.05),
+                  SizedBox(width: screenWidth * 0.075),
                   SizedBox(
                     width: screenWidth * 0.095,
                     height: screenWidth * 0.095,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {context.push('${AppRoutes.quiz}/$id3');},
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF0ED500),
                           shape:
@@ -274,12 +287,12 @@ class QuizScreen extends StatelessWidget {
 
                     ),
                   ),
-                  SizedBox(width: screenWidth * 0.05),
+                  SizedBox(width: screenWidth * 0.075),
                   SizedBox(
                     width: screenWidth * 0.095,
                     height: screenWidth * 0.095,
                     child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {context.push('${AppRoutes.quiz}/$id4');},
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF0ED500),
                           shape:
@@ -305,12 +318,12 @@ class QuizScreen extends StatelessWidget {
 
                     ),
                   ),
-                  SizedBox(width: screenWidth * 0.05),
+                  SizedBox(width: screenWidth * 0.075),
                   SizedBox(
             width: screenWidth * 0.095,
             height: screenWidth * 0.095,
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {context.push('${AppRoutes.quiz}/$id5');},
               style: ElevatedButton.styleFrom(
                   backgroundColor: Color(0xFF0ED500),
                   shape:
@@ -338,7 +351,7 @@ class QuizScreen extends StatelessWidget {
           ),
                 ],
               ),
-              SizedBox(height: screenHeight * 0.02),
+              SizedBox(height: screenHeight * 0.05),
               Row(
                 children: [
                   SizedBox(
@@ -346,7 +359,7 @@ class QuizScreen extends StatelessWidget {
                       height: screenHeight * 0.05,
                       child: ElevatedButton(
                         onPressed: () {
-                          //context.push('${AppRoutes.quiz}/$id++');
+                          context.push('${AppRoutes.quiz}/$idnext');
                         },
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Color(0xFFD1D1D1),

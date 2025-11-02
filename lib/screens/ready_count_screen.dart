@@ -4,6 +4,8 @@ import '../widgets/app_scaffold.dart';
 import 'package:go_router/go_router.dart';
 
 class ReadyCountScreen extends StatefulWidget {
+  const ReadyCountScreen({super.key});
+
   @override
   _VariableChange createState() => _VariableChange();
 }

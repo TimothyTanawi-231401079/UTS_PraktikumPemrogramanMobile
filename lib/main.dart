@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:uts_pemmob/config/routes.dart';
+import 'package:uts_pemmob/screens/finish_screen.dart';
 import 'package:uts_pemmob/screens/quiz_screen.dart';
 
 void main() {
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
           fontFamily: "RhodiumLibre"
       ),
-      home: QuizScreen(id: '1'),
+      home: FinishScreen(nama: 'Timothy'),
       debugShowCheckedModeBanner: false,
     );
   }
