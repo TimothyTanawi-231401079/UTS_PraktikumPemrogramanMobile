@@ -31,6 +31,11 @@ GoRouter createRouter() {
         builder: (context, state) => ReadyCountScreen(),
       ),
       GoRoute(
+        path: AppRoutes.finish,
+        name: 'finish',
+        builder: (context, state) => FinishScreen(),
+      ),
+      GoRoute(
           path: '${AppRoutes.quiz}/:id',
           name: 'quiz',
           parentNavigatorKey: rootNavigatorKey,
@@ -39,15 +44,15 @@ GoRouter createRouter() {
             return QuizScreen(id: id);
           }
       ),
-      GoRoute(
-          path: '${AppRoutes.finish}/:nama',
-          name: 'finish',
-          parentNavigatorKey: rootNavigatorKey,
-          builder: (context, state) {
-            final nama = state.pathParameters['nama'] ?? '';
-            return FinishScreen(nama: nama);
-          }
-      ),
+      // GoRoute(
+      //     path: '${AppRoutes.finish}/:nama',
+      //     name: 'finish',
+      //     parentNavigatorKey: rootNavigatorKey,
+      //     builder: (context, state) {
+      //       final nama = state.pathParameters['nama'] ?? '';
+      //       return FinishScreen(nama: nama);
+      //     }
+      // ),
 
     ],
     // errorBuilder: (context, state) => Scaffold(
