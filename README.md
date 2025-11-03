@@ -1,16 +1,21 @@
-# uts_pemmob
+# UTS_PraktikumPemrogramanMobile
 
-A new Flutter project.
+Nama: Timothy Tanawi
+NIM: 231401079
+Lab: 2
 
-## Getting Started
+## Nama Aplikasi
+Mobile Quiz
 
-This project is a starting point for a Flutter application.
+## Deskripsi Aplikasi
+Mobile Quiz merupakan aplikasi sederhana yang memberikan beberapa pertanyaan terkait pemrograman mobile. Aplikasi ini bertujuan memberikan pemahaman mengenai salah satu cara melakukan pemrograman mobile.
 
-A few resources to get you started if this is your first Flutter project:
+## Kredit
+- www.freepik.com
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshot/Video Aplikasi
+
+
+## Link mockup/prototype Aplikasi : 
+https://www.figma.com/design/98kpU81OHPX69lBazcfbnP/UTS-Pemmob?node-id=0-1&t=a4caRxkhjUhdezXx-1
