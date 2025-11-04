@@ -21,7 +21,7 @@ class FinishScreen extends StatelessWidget {
         child: Padding(
           padding: EdgeInsets.symmetric(
               horizontal: screenWidth * 0.1,
-              vertical: screenHeight * 0.1
+              vertical: screenHeight * 0.08
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,11 +50,11 @@ class FinishScreen extends StatelessWidget {
               ),
               SizedBox(height: screenHeight * 0.05),
               Container(
-                width: screenWidth * 0.65,
-                height: screenWidth * 0.65,
+                width: screenWidth * 0.6,
+                height: screenWidth * 0.6,
                   padding: EdgeInsets.symmetric(
-                      horizontal: screenWidth * 0.08,
-                      vertical: screenHeight * 0.09
+                      horizontal: screenWidth * 0.075,
+                      vertical: screenHeight * 0.085
                   ),
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(screenWidth),
@@ -90,7 +90,16 @@ class FinishScreen extends StatelessWidget {
                     color: Colors.black
                 ),
               ),
-              SizedBox(height: screenHeight * 0.05),
+              SizedBox(height: screenHeight * 0.02),
+              Text(
+                '"Kegagalan adalah syarat untuk belajar."',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontSize: screenWidth * 0.035,
+                    color: Colors.black
+                ),
+              ),
+              SizedBox(height: screenHeight * 0.035),
               SizedBox(
                 width: screenWidth * 0.6,
                 height: screenHeight * 0.06,

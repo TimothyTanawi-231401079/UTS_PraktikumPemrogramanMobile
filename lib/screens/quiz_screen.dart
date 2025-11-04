@@ -57,11 +57,8 @@ class _QuizScreenState extends State<QuizScreen> {
           child: Text('Soal tidak ditemukan'));
     }
 
-    final String id1 = '1';
-    final String id2 = '2';
-    final String id3 = '3';
-    final String id4 = '4';
-    final String id5 = '5';
+    final String checkbox_filled = "assets/images/checkbox.png";
+    final String checkbox= "assets/images/checkbox_empty.png";
     return AppScaffold(
         body: Padding(
           padding: EdgeInsets.symmetric(
@@ -71,22 +68,23 @@ class _QuizScreenState extends State<QuizScreen> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              SizedBox(height: screenHeight * 0.1),
-              Container(
-                width: screenHeight * 0.08,
-                height: screenHeight * 0.08,
-                padding: EdgeInsets.all(screenWidth * 0.01),
-                decoration: BoxDecoration(
-                  color: Color(0xFFB5BC00),
-                  borderRadius: BorderRadius.circular(screenWidth * 0.5)
-                ),
-                child: Text(
-                  soal.id,
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                    fontSize: screenWidth * 0.1,
+              SizedBox(height: screenHeight * 0.01),
+              Stack(
+                alignment: Alignment.center,
+                children: <Widget>[
+                  Image.asset(
+                    "assets/images/mobile_phone.png",
+                    height: screenHeight * 0.14,
+                    width: screenWidth * 0.12,
                   ),
-                ),
+                  Text(
+                    soal.id,
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      fontSize: screenWidth * 0.1,
+                    ),
+                  ),
+                ],
               ),
               SizedBox(height: screenHeight * 0.02),
               Text(
@@ -121,9 +119,10 @@ class _QuizScreenState extends State<QuizScreen> {
                           ),
                           child: Row(
                             children: [
-                              Icon(
-                                selected == '1'? Icons.check_box : Icons.check_box_outline_blank,
-                                color : selected == '1'? Colors.green : Colors.white,
+                              Image.asset(
+                                width: screenWidth * 0.06,
+                                  height: screenHeight * 0.06,
+                                  selected == '1'? checkbox_filled : checkbox
                               ),
                               SizedBox(
                                 width: screenWidth * 0.55,
@@ -157,10 +156,10 @@ class _QuizScreenState extends State<QuizScreen> {
                           ),
                           child: Row(
                             children: [
-                              Icon(
-                                selected == '2'? Icons.check_box : Icons.check_box_outline_blank,
-                                color : selected == '2'? Colors.green : Colors.white,
-
+                              Image.asset(
+                                  width: screenWidth * 0.06,
+                                  height: screenHeight * 0.06,
+                                  selected == '2'? checkbox_filled : checkbox
                               ),
                               SizedBox(
                                 width: screenWidth * 0.55,
@@ -194,10 +193,10 @@ class _QuizScreenState extends State<QuizScreen> {
                           ),
                           child: Row(
                             children: [
-                              Icon(
-                                selected == '3'? Icons.check_box : Icons.check_box_outline_blank,
-                                color : selected == '3'? Colors.green : Colors.white,
-
+                              Image.asset(
+                                  width: screenWidth * 0.06,
+                                  height: screenHeight * 0.06,
+                                  selected == '3'? checkbox_filled : checkbox
                               ),
                               SizedBox(
                                 width: screenWidth * 0.55,
@@ -231,10 +230,10 @@ class _QuizScreenState extends State<QuizScreen> {
                           ),
                           child: Row(
                             children: [
-                              Icon(
-                                selected == '4'? Icons.check_box : Icons.check_box_outline_blank,
-                                color : selected == '4'? Colors.green : Colors.white,
-
+                              Image.asset(
+                                  width: screenWidth * 0.06,
+                                  height: screenHeight * 0.06,
+                                  selected == '4'? checkbox_filled : checkbox
                               ),
                               SizedBox(
                                 width: screenWidth * 0.55,
@@ -255,135 +254,32 @@ class _QuizScreenState extends State<QuizScreen> {
                 }
             ),
               SizedBox(height: screenHeight * 0.035),
-              //Tombol Soal
               Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  SizedBox(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: List.generate(5, (index) {
+                  final nomor = (index + 1).toString();
+                  return SizedBox(
                     width: screenWidth * 0.095,
                     height: screenWidth * 0.095,
                     child: ElevatedButton(
-                        onPressed: () {context.push('${AppRoutes.quiz}/$id1');},
-                       style: ElevatedButton.styleFrom(
-                           backgroundColor: Color(0xFF0ED500),
-                           shape:
-                           RoundedRectangleBorder(),
-                           elevation: 3,
-                           padding: EdgeInsets.all(screenWidth * 0.01)
-                       ),
-                       child: Text(
-                        '1',
-                        textAlign: TextAlign.center,
-
-                        style: TextStyle(
-                          fontSize: screenWidth * 0.05,
-                          color: Colors.black
-                          ),
-                        ),
-
-                    ),
-                  ),
-                  SizedBox(width: screenWidth * 0.075),
-                  SizedBox(
-                    width: screenWidth * 0.095,
-                    height: screenWidth * 0.095,
-                    child: ElevatedButton(
-                      onPressed: () {context.push('${AppRoutes.quiz}/$id2');},
+                      onPressed: () => context.push('${AppRoutes.quiz}/$nomor'),
                       style: ElevatedButton.styleFrom(
                           backgroundColor: Color(0xFF0ED500),
-                          shape:
-                          RoundedRectangleBorder(),
+                          shape: RoundedRectangleBorder(),
                           elevation: 3,
                           padding: EdgeInsets.all(screenWidth * 0.01)
                       ),
                       child: Text(
-                        '2',
+                        nomor,
                         textAlign: TextAlign.center,
-
                         style: TextStyle(
                             fontSize: screenWidth * 0.05,
                             color: Colors.black
                         ),
                       ),
-
                     ),
-                  ),
-                  SizedBox(width: screenWidth * 0.075),
-                  SizedBox(
-                    width: screenWidth * 0.095,
-                    height: screenWidth * 0.095,
-                    child: ElevatedButton(
-                      onPressed: () {context.push('${AppRoutes.quiz}/$id3');},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF0ED500),
-                          shape:
-                          RoundedRectangleBorder(),
-                          elevation: 3,
-                          padding: EdgeInsets.all(screenWidth * 0.01)
-                      ),
-                      child: Text(
-                        '3',
-                        textAlign: TextAlign.center,
-
-                        style: TextStyle(
-                            fontSize: screenWidth * 0.05,
-                            color: Colors.black
-                        ),
-                      ),
-
-                    ),
-                  ),
-                  SizedBox(width: screenWidth * 0.075),
-                  SizedBox(
-                    width: screenWidth * 0.095,
-                    height: screenWidth * 0.095,
-                    child: ElevatedButton(
-                      onPressed: () {context.push('${AppRoutes.quiz}/$id4');},
-                      style: ElevatedButton.styleFrom(
-                          backgroundColor: Color(0xFF0ED500),
-                          shape:
-                          RoundedRectangleBorder(),
-                          elevation: 3,
-                          padding: EdgeInsets.all(screenWidth * 0.01)
-                      ),
-                      child: Text(
-                        '4',
-                        textAlign: TextAlign.center,
-
-                        style: TextStyle(
-                            fontSize: screenWidth * 0.05,
-                            color: Colors.black
-                        ),
-                      ),
-
-                    ),
-                  ),
-                  SizedBox(width: screenWidth * 0.075),
-                  SizedBox(
-            width: screenWidth * 0.095,
-            height: screenWidth * 0.095,
-            child: ElevatedButton(
-              onPressed: () {context.push('${AppRoutes.quiz}/$id5');},
-              style: ElevatedButton.styleFrom(
-                  backgroundColor: Color(0xFF0ED500),
-                  shape:
-                  RoundedRectangleBorder(),
-                  elevation: 3,
-                  padding: EdgeInsets.all(screenWidth * 0.01)
-              ),
-              child: Text(
-                '5',
-                textAlign: TextAlign.center,
-
-                style: TextStyle(
-                    fontSize: screenWidth * 0.05,
-                    color: Colors.black
-                ),
-              )
-
-            ),
-          ),
-                ],
+                  );
+                }),
               ),
               SizedBox(height: screenHeight * 0.05),
               Row(

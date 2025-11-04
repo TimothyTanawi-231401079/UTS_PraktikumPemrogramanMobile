@@ -59,9 +59,27 @@ class _HomeScreenState extends State<HomeScreen> {
                         'MOBILE QUIZ',
                         textAlign: TextAlign.center,
                         style: TextStyle(
-
-                            fontSize: screenWidth * 0.115,
-                            color: Color(0xFFB5BC00)
+                          inherit: true,
+                          fontSize: screenWidth * 0.115,
+                          color: Color(0xFFB5BC00),
+                            shadows: [
+                              Shadow(
+                                  offset: Offset(-1, -1),
+                                  color: Colors.black.withValues(alpha: 0.5)
+                              ),
+                              Shadow(
+                                  offset: Offset(1, -1),
+                                  color: Colors.black.withValues(alpha: 0.5)
+                              ),
+                              Shadow(
+                                  offset: Offset(1, 1),
+                                  color: Colors.black.withValues(alpha: 0.5)
+                              ),
+                              Shadow(
+                                  offset: Offset(-1, 1),
+                                  color: Colors.black.withValues(alpha: 0.5)
+                              ),
+                            ]
                         ),
                       ),
                       SizedBox(height: screenHeight * 0.02),
